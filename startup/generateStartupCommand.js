@@ -57,7 +57,7 @@ if (finalCommand && fs.existsSync(finalCommand)) {
     {
         if (process.env.APPSVC_REMOTE_DEBUGGING_BREAK == "TRUE")
         {
-            startupCommand = "node --inspect-brk=0.0.0.0:" + process.env.APPSVC_TUNNEL_PORT + " " + finalCommand;
+            startupCommand = "node --inspect=0.0.0.0:" + process.env.APPSVC_TUNNEL_PORT + " --debug-brk " + finalCommand;
         }
         else
         {
